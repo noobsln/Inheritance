@@ -8,9 +8,12 @@ private:
 	string manufacturer;
 	int yearBuilt;
 public:
-	Vehicle(string, int);
-	string getManufacturer() const;
-	int getYearBuilt() const;
+	Vehicle(string m, int y) {
+		manufacturer = m;
+		yearBuilt = y;
+	}
+	string getManufacturer() const { return manufacturer; }
+	int getYearBuilt() const { return yearBuilt; }
 	void setManufacturer(string);
 	void setYearBuilt(int);
 	void displayInfo();
