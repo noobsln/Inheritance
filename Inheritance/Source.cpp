@@ -11,3 +11,31 @@ int validate(int input) {
 	cin.ignore(99999, '\n');
 	return input;
 }
+
+int main() {
+	string manu;
+	int year = 0, doors = 0, towcap = 0;
+	for (int i = 0; i < 3; i++) {
+		cout << "Enter manufacturer: ";
+		getline(cin, manu);
+		cout << "Enter year: ";
+		year = validate(year);
+		if (i == 0) {
+			Vehicle v(manu, year);
+			v.displayInfo();
+		}
+		else if (i == 1) {
+			cout << "Enter num doors: ";
+			doors = validate(doors);
+			Car c(manu, year, doors);
+			c.displayInfo();
+		}
+		else {
+			cout << "Enter towing capacity: ";
+			towcap = validate(towcap);
+			Truck t(manu, year, towcap);
+			t.displayInfo();
+		}
+	}
+	return 0;
+}
