@@ -36,6 +36,8 @@ int main() {
 			Truck t(manu, year, towcap);
 			t.displayInfo();
 		}
+		cout << "\n\n";
 	}
+	getchar();
 	return 0;
 }
